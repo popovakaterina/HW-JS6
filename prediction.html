@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гадалка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="predict">
+            <h1 class="head">Магия сегодняшнего дня</h1>
+            <div class="butt">
+                <p class="answer"></p>
+                <button class="but">Узнать, что ждет Вас сегодня</button>
+            </div>
+        </div> 
+    </div>
+    <script>
+        const taskBut = document.querySelector('.but');
+        const answP = document.querySelector('.answer');
+
+        const predictions = ['Удача придет откуда не ждете','Вы найдете то, что ищете','Получите хорошую новость','Станете желанным гостем','Слова, которые вы ждете, будут сказаны','Все желания сбудутся','Ваша награда найдет вас']
+    
+        taskBut.addEventListener("click", function(){
+            let i = Math.floor(Math.random()*predictions.length);
+            answP.textContent = predictions[i];
+            
+        })
+    </script>
+</body>
+</html>
